@@ -54,6 +54,10 @@ sum'' :: (Num a) => [a] -> a
 sum'' = foldl (+) 0
 
 
+sum''' :: (Num a) => [a] -> a
+sum''' xs = foldl (+) 0 xs
+
+
 elem' :: (Eq a) => a -> [a] -> Bool
 elem' y ys = foldl (\acc x -> if x == y then True else acc) False ys
 
@@ -88,3 +92,6 @@ last' = foldl1 (\_ x -> x)
 
 sqrtSums :: Int
 sqrtSums = length (takeWhile (< 1000) (scanl1 (+) (map srt [1..]))) + 1
+
+
+
