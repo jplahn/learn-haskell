@@ -4,4 +4,4 @@ data Person = Person { firstName :: String
 					 , height :: Float
 					 , phoneNumber :: String
 					 , flavor :: String
-					 } deriving (Show, Eq)
+					 } deriving (Show, Eq, Read)
